@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+		.row {
+			margin-top: 50px;
+		}
+	</style>
+	<script>
+		
+	</script>
+</head>
+<body>
+    <div class="container">
+		<div class="row">
+
+			
+			<div class="col-xs-6 text-xs-center offset-xs-3">
+				<img class="img-thumbnail" id="photo" src="http://files.courses.dp.ua/web/07/1.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4 text-xs-right">
+							<button class="btn btn-default btn-lg">
+								<i class="fa fa-arrow-left fa-2x"  aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="col-xs-4 text-xs-center">
+							<h1 id="counter" class="display-4">#1</h1>
+						</div>	
+						<div class="col-xs-4 text-xs-left">
+							<button class="btn btn-success btn-lg" onclick="next()">
+								<i class="fa fa-arrow-right fa-2x"  aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				</div>	
+			</div>	
+			
+		</div>
+	</div>
+	<script>
+		var index = 1;
+
+		function next() {
+			index = index + 1;
+
+			if(index > 8) {
+				index = 1;
+			}
+
+			photo.src = "http://files.courses.dp.ua/web/07/" + index + ".jpg";
+
+			counter.innerHTML = "#" + index;
+		}
+
+		setInterval(next, 2000);
+	</script>
+</body>
+</html>
